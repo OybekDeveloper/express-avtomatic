@@ -44,10 +44,7 @@ body{
   font-size: clamp(16px, 3vw, 1rem);
 }
 .clamp5 {
-  font-size: clamp(8px, 2vw, 0.8rem);
-}
-.clamp5 {
-  font-size: clamp(8px, 2vw, 0.7rem);
+  font-size: clamp(10px, 1vw, 1rem);
 }
 
 .clamp2Half {
@@ -59,4 +56,8 @@ body{
 }
 .clamp4Half {
   font-size: clamp(0.7rem, 3vw, 0.9rem);
+}
+
+.head-h1{
+  text-shadow: 1px 1px 2px #000000;
 }
