@@ -98,7 +98,7 @@ const Home = () => {
           {disignData.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col gap-4 bg-secondaryBg p-4 rounded-md"
+              className="flex flex-col gap-4 bg-secondaryBg p-4 rounded-md hover:scale-105 transition-all duration-300 cursor-pointer"
             >
               <div className="bg w-full h-[100px]">
                 <img
