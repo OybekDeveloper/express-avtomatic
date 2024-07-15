@@ -14,7 +14,7 @@ const Navbar = () => {
       <main className="max-w-[1440px] mx-auto w-11/12 h-full flex justify-between items-center">
         <NavLink to={"/"} className="flex justify-start items-center">
           <img
-            className="w-[100px] h-[88px] object-contain"
+            className="w-[150px] h-[88px] object-contain"
             src={logo}
             alt=""
           />
