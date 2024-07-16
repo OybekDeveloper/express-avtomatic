@@ -19,7 +19,7 @@ export const navLinkData = [
     link: "/about",
   },
   {
-    title: "СТРОИТЕЛЬНЫЕ \n УСЛУГИ",
+    title: "УСЛУГИ",
     link: "/services",
     submenu: [
       {

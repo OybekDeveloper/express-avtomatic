@@ -10,7 +10,7 @@ function App() {
   return (
     <main>
       <Navbar />
-      <div className="app mt-[88px] min-h-screen">
+      <div className="overflow-x-hidden app mt-[88px] min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

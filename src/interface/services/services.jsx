@@ -1,22 +1,45 @@
 import React, { useEffect } from "react";
 import { servicesData } from "../../components/data";
 import { home1 } from "../../images/home-img";
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useGSAP(() => {
+    const tl1 = gsap.timeline({
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: "#container",
+        start: "20% bottom",
+        end: "bottom top",
+      },
+    });
+
+    tl1.fromTo(
+      "#container .section1 .services-container .services",
+      { opacity: 0, y: 60 },
+      { opacity: 1, y: 0, stagger: 0.5 }  // Added easing for smooth animation
+    );
+  });
+
   return (
-    <main className="w-full flex flex-col gap-[100px]">
-      <section className="w-11/12 mx-auto max-w-[1440px] pt-4">
+    <main id="container" className="w-full flex flex-col gap-[50px] mb-4">
+      <section className="section1 w-11/12 mx-auto max-w-[1440px] pt-4">
         <h1 className="text-primary font-bold clamp3 text-center">
           Услуги строительной компании «EXPRESS AUTOMATICA»
         </h1>
-        <div className="grid grid-cols-4 gap-4 mt-3">
+        <div className="services-container grid grid-cols-4 gap-4 mt-3">
           {servicesData.map((item, idx) => (
             <div
               key={idx}
-              className="hover:scale-105 transition-all duration-300 cursor-pointer w-full  flex justify-center items-center flex-col gap-3 bg-secondaryBg rounded-[12px] p-4"
+              className="services  cursor-pointer w-full flex justify-center items-center flex-col gap-3 bg-secondaryBg rounded-[12px] p-4"
             >
               <div>
                 <img className="rounded-md" src={home1} alt="" />
@@ -34,19 +57,17 @@ const Services = () => {
         </p>
       </section>
       <section className="w-11/12 mx-auto max-w-[1440px] pt-4">
-        <h1 className="text-primary font-bold clamp3">
-          Качество услуг
-        </h1>
+        <h1 className="text-primary font-bold clamp3">Качество услуг</h1>
         <ul className="flex flex-col gap-4">
           <li>
-            <strong>Документы и сертификаты.</strong>. Работа компании
+            <strong>Документы и сертификаты.</strong>. Работа компании
             лицензирована. «EXPRESS AUTOMATICA» является членом строительной
             СРО. Сотрудники имеют профильное образование, необходимые допуски.
             Это гарантирует надежность, качество, соблюдение технологий
             строительства.
           </li>
           <li>
-            <strong>Обязательства по договору. </strong>.Мы работаем официально,
+            <strong>Обязательства по договору. </strong>.Мы работаем официально,
             закрепляем условия сотрудничества в договоре, гарантируем их
             исполнение. Это касается и качества, и соблюдения сроков, и цен на
             услуги.

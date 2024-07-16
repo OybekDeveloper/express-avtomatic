@@ -1,16 +1,17 @@
 import React, { useEffect } from "react";
 import { home4 } from "../../images/home-img";
-
+import "./index.scss";
 const About = () => {
   useEffect(() => {
     // window.scrollTo(0, 0);
   }, []);
   return (
-    <main className="w-full flex flex-col gap-[100px]">
-      <section className="w-11/12 mx-auto max-w-[1440px] flex justify-center items-start flex-col min-h-[calc(100vh-88px)]">
+    <main className="w-full flex flex-col gap-[100px] aboutback relative text-white mb-4">
+      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-1"></div>
+      <section className="relative w-11/12 mx-auto max-w-[1440px] flex justify-center items-start flex-col min-h-[calc(100vh-88px)]">
         <div className="grid grid-cols-2 gap-3">
           <div className="flex flex-col items-start justify-center h-full">
-            <h1 className="text-thin clamp3">О Компании</h1>
+            <h1 className="text-white clamp3">О Компании</h1>
             <p className="w-full">
               Строительная компания «EXPRESS AUTOMATICA» работает с 2002 года.
               Деятельность сертифицирована, «EXPRESS AUTOMATICA» — участник
@@ -25,8 +26,8 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="w-11/12 mx-auto max-w-[1440px] flex flex-col">
-        <h1 className="text-thin clamp3">Наши преимущества</h1>
+      <section className="relative w-11/12 mx-auto max-w-[1440px] flex flex-col">
+        <h1 className="text-white clamp3">Наши преимущества</h1>
         <ul className="flex flex-col gap-4 mt-3">
           <li className="clamp4">
             <strong>Гибкое сотрудничество. </strong> Возможно выполнение полного
@@ -65,7 +66,7 @@ const About = () => {
           </li>
         </ul>
       </section>
-      <section className="w-11/12 mx-auto max-w-[1440px] flex gap-6">
+      <section className="relative w-11/12 mx-auto max-w-[1440px] flex gap-6">
         <div>
           <img src={home4} alt="" />
         </div>
