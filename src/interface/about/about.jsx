@@ -1,15 +1,125 @@
 import React, { useEffect } from "react";
 import { home4 } from "../../images/home-img";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./index.scss";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    gsap.fromTo(
+      ".section1 h1",
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: ".section1",
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section1 p",
+      { opacity: 0, x: -50 },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: ".section1",
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section1 img",
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+          trigger: ".section1",
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section2 h1",
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: ".section2",
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section2 ul li",
+      { opacity: 0, x: -50 },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: ".section2",
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section3 img",
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+          trigger: ".section3",
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section3 h1",
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: ".section3",
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section3 ul li",
+      { opacity: 0, x: -50 },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: ".section3",
+          start: "top 80%",
+        },
+      }
+    );
   }, []);
+
   return (
     <main className="w-full flex flex-col gap-[100px] aboutback relative text-white mb-4">
       <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-1"></div>
-      <section className="relative w-11/12 mx-auto max-w-[1440px] flex justify-center items-start flex-col min-h-[calc(100vh-88px)]">
-        <div className="grid grid-cols-2 gap-3">
+      <section className="section1 relative w-11/12 mx-auto max-w-[1440px] flex justify-center items-start flex-col min-h-[calc(100vh-88px)]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex flex-col items-start justify-center h-full">
             <h1 className="text-white clamp3">О Компании</h1>
             <p className="w-full">
@@ -22,41 +132,41 @@ const About = () => {
             </p>
           </div>
           <div className="w-full">
-            <img src={home4} alt="dddsfdsf" />
+            <img src={home4} alt="Company Image" />
           </div>
         </div>
       </section>
-      <section className="relative w-11/12 mx-auto max-w-[1440px] flex flex-col">
+      <section className="section2 relative w-11/12 mx-auto max-w-[1440px] flex flex-col">
         <h1 className="text-white clamp3">Наши преимущества</h1>
         <ul className="flex flex-col gap-4 mt-3">
           <li className="clamp4">
             <strong>Гибкое сотрудничество. </strong> Возможно выполнение полного
             объема работ для объекта или их отдельных этапов: изысканий,
-            проектирования, строительства, отделки или монтажа. По результатам
+            проектирования, строительства, отделки или монтажа. По результатам
             проектирования и разработки технической документации возможен
             авторский надзор над проведением работ, участие в их приемке.
           </li>
           <li className="clamp4">
             <strong>Соблюдение норм, </strong> стандартов,
-            законодательства. «EXPRESS AUTOMATICA» гарантирует соблюдение общих
+            законодательства. «EXPRESS AUTOMATICA» гарантирует соблюдение общих
             строительных норм, специальных стандартов, действующих для отдельных
             объектов (промышленных зданий, медучреждений, жилых домов).
           </li>
           <li className="clamp4">
-            <strong>Техническая оснащенность. </strong>При проектировании
+            <strong>Техническая оснащенность. </strong>При проектировании
             «EXPRESS AUTOMATICA» точно определяет требования к используемым
             строительным, отделочным материалам, возможен их подбор, организация
             снабжения для стройплощадки.
           </li>
           <li className="clamp4">
-            <strong>Специалисты.  </strong> В штате компании —
-            инженеры-проектировщики, специалисты по электромонтажу, устройству
+            <strong>Специалисты. </strong> В штате компании —
+            инженеры-проектировщики, специалисты по электромонтажу, устройству
             инженерных систем, коммуникаций, выполнению кровельных,
             фундаментных, монтажных и других работ. Квалификация наших
             сотрудников гарантирует качественную реализацию проекта.
           </li>
           <li className="clamp4">
-            <strong>Организация строительства.   </strong> Выполняется с
+            <strong>Организация строительства. </strong> Выполняется с
             соблюдением норм безопасности, с гарантией соблюдения согласованных
             сроков. Возможна разработка проекта организации работ, контроль его
             выполнения. При реконструкции, капитальном ремонте, отделочных или
@@ -66,9 +176,9 @@ const About = () => {
           </li>
         </ul>
       </section>
-      <section className="relative w-11/12 mx-auto max-w-[1440px] flex gap-6">
+      <section className="section3 relative w-11/12 mx-auto max-w-[1440px] flex flex-col md:flex-row gap-6">
         <div>
-          <img src={home4} alt="" />
+          <img src={home4} alt="Services Image" />
         </div>
         <div>
           <h1 className="font-bold clamp3">
@@ -81,28 +191,28 @@ const About = () => {
               строим склады, жилые дома, офисные, торговые центры,
               производственные здания;
             </li>
-            <li>-возведение многоэтажных домов;</li>
+            <li>- возведение многоэтажных домов;</li>
             <li>
-              -выборочную или полную реконструкцию, капитальный, косметический
+              - выборочную или полную реконструкцию, капитальный, косметический
               ремонт зданий, сооружений, отдельных помещений;
             </li>
             <li>
-              -проектирование (разработка дизайн-проекта, проектирование,
+              - проектирование (разработка дизайн-проекта, проектирование,
               формирование технической документации, планов, чертежей, сметы,
               плана организации строительства или реконструкции.);
             </li>
             <li>
-              -монтаж (электрооборудования, сантехнического оборудования,
+              - монтаж (электрооборудования, сантехнического оборудования,
               элементов инженерных систем, производственного, медицинского и
               другого оборудования);
             </li>
             <li>
-              -отдельные строительные работы, включая земляные, фасадные,
+              - отдельные строительные работы, включая земляные, фасадные,
               кровельные, отделочные, фундаментные, устройство перегородок,
               стен, перекрытий и т.п.;
             </li>
             <li>
-              -благоустройство прилегающей территории: озеленение, устройство
+              - благоустройство прилегающей территории: озеленение, устройство
               подъездных путей, парковочных площадок, пешеходных дорожек,
               создание игровых, детских, спортивных площадок, рекреационных зон.
             </li>

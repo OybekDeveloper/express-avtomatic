@@ -2,30 +2,72 @@ import React, { useEffect } from "react";
 import { servicesData } from "../../components/data";
 import { home1 } from "../../images/home-img";
 import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, []);
 
   useGSAP(() => {
-    const tl1 = gsap.timeline({
-      delay: 0.5,
+    const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#container",
-        start: "20% bottom",
+        trigger: ".section1",
+        start: "top 80%",
+        end: "bottom top",
+      },
+    });
+
+    tl.fromTo(
+      ".section1 h1",
+      { opacity: 0, x: -20 },
+      { opacity: 1, x: 0, stagger: 0.1, ease: "power1.out" }
+    ).fromTo(
+      ".section1 .services-container .services",
+      { opacity: 0, y: 60 },
+      { opacity: 1, y: 0, stagger: 0.1, ease: "power1.out" },
+      "-=0.3"
+    );
+
+    const tl1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section2",
+        start: "top 80%",
         end: "bottom top",
       },
     });
 
     tl1.fromTo(
-      "#container .section1 .services-container .services",
-      { opacity: 0, y: 60 },
-      { opacity: 1, y: 0, stagger: 0.5 }  // Added easing for smooth animation
+      ".section2 h1",
+      { opacity: 0, x: -20 },
+      { opacity: 1, x: 0, stagger: 0.1, ease: "power1.out" }
+    ).fromTo(
+      ".section2 ul li",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, stagger: 0.1, ease: "power1.out" },
+      "-=0.3"
+    );
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section3",
+        start: "top 80%",
+        end: "bottom top",
+      },
+    });
+
+    tl2.fromTo(
+      ".section3 h1",
+      { opacity: 0, x: -20 },
+      { opacity: 1, x: 0, stagger: 0.1, ease: "power1.out" }
+    ).fromTo(
+      ".section3 ul li",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, stagger: 0.1, ease: "power1.out" },
+      "-=0.3"
     );
   });
 
@@ -35,11 +77,11 @@ const Services = () => {
         <h1 className="text-primary font-bold clamp3 text-center">
           Услуги строительной компании «EXPRESS AUTOMATICA»
         </h1>
-        <div className="services-container grid grid-cols-4 gap-4 mt-3">
+        <div className="services-container grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 mt-3">
           {servicesData.map((item, idx) => (
             <div
               key={idx}
-              className="services  cursor-pointer w-full flex justify-center items-center flex-col gap-3 bg-secondaryBg rounded-[12px] p-4"
+              className="services cursor-pointer w-full flex justify-center items-center flex-col gap-3 bg-secondaryBg rounded-[12px] p-4"
             >
               <div>
                 <img className="rounded-md" src={home1} alt="" />
@@ -56,7 +98,7 @@ const Services = () => {
           ремонт.
         </p>
       </section>
-      <section className="w-11/12 mx-auto max-w-[1440px] pt-4">
+      <section className="section2 w-11/12 mx-auto max-w-[1440px] pt-4">
         <h1 className="text-primary font-bold clamp3">Качество услуг</h1>
         <ul className="flex flex-col gap-4">
           <li>
@@ -78,7 +120,7 @@ const Services = () => {
           </li>
         </ul>
       </section>
-      <section className="w-11/12 mx-auto max-w-[1440px] pt-4">
+      <section className="section3 w-11/12 mx-auto max-w-[1440px] pt-4">
         <h1 className="text-primary font-bold clamp3">
           Виды услуг. Мы предлагаем:
         </h1>
