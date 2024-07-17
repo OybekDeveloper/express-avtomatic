@@ -116,12 +116,12 @@ const About = () => {
   }, []);
 
   return (
-    <main className="w-full flex flex-col gap-[100px] aboutback relative text-white mb-4">
+    <main className="w-full flex flex-col gap-[100px] aboutback relative text-white pb-[50px]">
       <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-1"></div>
       <section className="section1 relative w-11/12 mx-auto max-w-[1440px] flex justify-center items-start flex-col min-h-[calc(100vh-88px)]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex flex-col items-start justify-center h-full">
-            <h1 className="text-white clamp3">О Компании</h1>
+            <h1 className="text-white clamp2">О Компании</h1>
             <p className="w-full">
               Строительная компания «EXPRESS AUTOMATICA» работает с 2002 года.
               Деятельность сертифицирована, «EXPRESS AUTOMATICA» — участник
@@ -132,7 +132,7 @@ const About = () => {
             </p>
           </div>
           <div className="w-full">
-            <img src={home4} alt="Company Image" />
+            <img className="rounded-md" src={home4} alt="dssdfd" />
           </div>
         </div>
       </section>
@@ -147,10 +147,10 @@ const About = () => {
             авторский надзор над проведением работ, участие в их приемке.
           </li>
           <li className="clamp4">
-            <strong>Соблюдение норм, </strong> стандартов,
-            законодательства. «EXPRESS AUTOMATICA» гарантирует соблюдение общих
-            строительных норм, специальных стандартов, действующих для отдельных
-            объектов (промышленных зданий, медучреждений, жилых домов).
+            <strong>Соблюдение норм, </strong> стандартов, законодательства.
+            «EXPRESS AUTOMATICA» гарантирует соблюдение общих строительных норм,
+            специальных стандартов, действующих для отдельных объектов
+            (промышленных зданий, медучреждений, жилых домов).
           </li>
           <li className="clamp4">
             <strong>Техническая оснащенность. </strong>При проектировании
@@ -176,9 +176,9 @@ const About = () => {
           </li>
         </ul>
       </section>
-      <section className="section3 relative w-11/12 mx-auto max-w-[1440px] flex flex-col md:flex-row gap-6">
-        <div>
-          <img src={home4} alt="Services Image" />
+      <section className="section3 relative w-11/12 mx-auto max-w-[1440px] flex flex-col md:flex-row gap-6 justify-between items-center">
+        <div className="">
+          <img src={home4} className="rounded-md" alt="Services" />
         </div>
         <div>
           <h1 className="font-bold clamp3">

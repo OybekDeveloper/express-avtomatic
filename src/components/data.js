@@ -1,4 +1,10 @@
 import {
+  contact1,
+  contact2,
+  contact3,
+  contact4,
+} from "../images/contact-image";
+import {
   disign,
   disign1,
   disign2,
@@ -153,5 +159,20 @@ export const servicesData = [
   {
     title: "Благоустройство",
     img: "",
+  },
+];
+
+export const contactImage = [
+  {
+    img: contact1,
+  },
+  {
+    img: contact2,
+  },
+  {
+    img: contact3,
+  },
+  {
+    img: contact4,
   },
 ];

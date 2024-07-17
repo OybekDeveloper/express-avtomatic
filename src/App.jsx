@@ -6,6 +6,7 @@ import About from "./interface/about/about";
 import Contact from "./interface/contact/contact";
 import Services from "./interface/services/services";
 import TopButton from "./components/top-button/top-button";
+import ConstructionHouse from "./interface/services/01construction-house";
 
 function App() {
   return (
@@ -16,6 +17,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/construction-house" element={<ConstructionHouse />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/services" element={<Services />} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>

@@ -133,7 +133,7 @@ const Navbar = () => {
           <div className="md:hidden burger-menu relative">
             <BurgerMenu handleOpenMenu={handleOpenMenu} isOpen={isOpen} />
           </div>
-          <div className="mobile-menu flex flex-col gap-3 fixed w-screen h-[calc(100vh-88px)] top-[88px] left-0 bg-white overflow-y-scroll">
+          <div className="mobile-menu flex flex-col gap-3 fixed w-screen overflow-x-hidden h-[calc(100vh-88px)] top-[88px] left-0 bg-white overflow-y-scroll">
             <div className="w-full nav-tab-container hidden max-md:flex flex-col justify-start items-start lg:gap-6 gap-3 px-2">
               {navLinkData.map((item, idx) => (
                 <div
@@ -175,6 +175,7 @@ const Navbar = () => {
                       <div className="absolute w-[20px] bg-white rotate-45"></div>
                       {item.submenu.map((subItem, subIdx) => (
                         <NavLink
+                        onClick={()=>setIsOpen(false)}
                           to={subItem.link}
                           key={subIdx}
                           className={"buttons"}
