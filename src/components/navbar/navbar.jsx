@@ -136,9 +136,7 @@ const Navbar = () => {
           <div className="mobile-menu flex flex-col gap-3 fixed w-screen h-[calc(100vh-88px)] top-[88px] left-0 bg-white overflow-y-scroll">
             <div className="w-full nav-tab-container hidden max-md:flex flex-col justify-start items-start lg:gap-6 gap-3 px-2">
               {navLinkData.map((item, idx) => (
-                <NavLink
-                  onClick={() => setIsOpen(false)}
-                  to={item.link !== "dropdown" && item.link}
+                <div
                   key={idx}
                   className={"relative w-full flec flex-col group"}
                 >
@@ -150,9 +148,21 @@ const Navbar = () => {
                         } btn font-bold clamp4 w-full`}
                       >
                         <div className="w-full flex justify-between items-center">
-                          {item.title}
+                          <NavLink
+                            to={item.link}
+                            onClick={() => setIsOpen(false)}
+                            className={`${
+                              item.submenu ? "w-1/2" : "w-full"
+                            } text-start`}
+                          >
+                            {" "}
+                            {item.title}
+                          </NavLink>
                           {item.submenu && (
-                            <div className="text-xl">
+                            <div
+                              onClick={() => setIsOpenSub(!isOpenSub)}
+                              className="text-xl w-1/2 flex justify-end"
+                            >
                               <FaAngleDown />
                             </div>
                           )}
@@ -160,32 +170,30 @@ const Navbar = () => {
                       </button>
                     </div>
                   </div>
-                  {item.submenu && (
-                    <div className="group-hover:block hover:block hidden">
-                      <div className="relative bg-white px-4 w-full whitespace-nowrap flex flex-col gap-2">
-                        <div className="absolute w-[20px] bg-white rotate-45"></div>
-                        {item.submenu.map((subItem, subIdx) => (
-                          <NavLink
-                            to={subItem.link}
-                            key={subIdx}
-                            className={"buttons"}
+                  {item.submenu && isOpenSub && (
+                    <div className="relative bg-white px-4 w-full whitespace-nowrap flex flex-col gap-2">
+                      <div className="absolute w-[20px] bg-white rotate-45"></div>
+                      {item.submenu.map((subItem, subIdx) => (
+                        <NavLink
+                          to={subItem.link}
+                          key={subIdx}
+                          className={"buttons"}
+                        >
+                          <button
+                            className={`${
+                              subItem.link === pathname
+                                ? "text-primary"
+                                : "text-thin"
+                            } btn font-bold clamp4`}
                           >
-                            <button
-                              className={`${
-                                subItem.link === pathname
-                                  ? "text-primary"
-                                  : "text-thin"
-                              } btn font-bold clamp4`}
-                            >
-                              <span></span>
-                              {subItem.title}
-                            </button>
-                          </NavLink>
-                        ))}
-                      </div>
+                            <span></span>
+                            {subItem.title}
+                          </button>
+                        </NavLink>
+                      ))}
                     </div>
                   )}
-                </NavLink>
+                </div>
               ))}
             </div>
             <div className="sm:hidden phone flex items-center gap-3 rounded-3xl border border-primary p-2 cursor-pointer shadow-lg mx-2">
