@@ -21,26 +21,22 @@ export default function Language() {
   return (
     <Listbox value={selected} onChange={setSelected}>
       {({ open }) => (
-        <div className="relative w-30 listbox-container">
+        <div className="relative w-[50px] listbox-container">
           <ListboxButton
             className={clsx(
-              "relative w-full rounded-lg border border-primaryBg max-md:py-1 py-2 pr-5 pl-3 text-left text-black shadow-lg",
+              "relative w-full rounded-lg border border-primaryBg  py-2 px-4 text-left text-black shadow-lg",
               "focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primaryBg",
-              "cursor-pointer clamp5 lg:text-md flex justify-between items-center"
+              "cursor-pointer clamp5 lg:text-md flex justify-between items-center text-center"
             )}
           >
             {selected.name}
-            <ChevronDownIcon
-              className="group pointer-events-none size-6 lg:size-4 fill-black"
-              aria-hidden="true"
-            />
           </ListboxButton>
           <ListboxOptions
             className={clsx(
               "listbox-options absolute mt-1 w-30 rounded-md bg-white shadow-lg",
               "max-h-60 py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none",
               "transition duration-200 ease-in-out transform origin-top",
-              { "block": open, "hidden": !open }
+              { block: open, hidden: !open }
             )}
           >
             {people.map((person) => (
@@ -49,7 +45,7 @@ export default function Language() {
                 value={person}
                 className={({ active, selected }) =>
                   clsx(
-                    "listbox cursor-default select-none relative py-1 pl-10 pr-4 clamp5 lg:text-md",
+                    "listbox cursor-default select-none relative py-1 pl-5 pr-4 clamp5 lg:text-md",
                     active ? "text-amber-900 bg-amber-100" : "text-gray-900",
                     selected ? "font-medium" : "font-normal"
                   )
@@ -62,14 +58,9 @@ export default function Language() {
                         "block truncate",
                         selected ? "font-semibold" : "font-normal"
                       )}
-                    >
-                      {person.name}
-                    </span>
-                    {selected ? (
-                      <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
-                        <CheckIcon className="w-5 h-5" aria-hidden="true" />
-                      </span>
-                    ) : null}
+                    ></span>
+                  
+                    {person.name}
                   </>
                 )}
               </ListboxOption>

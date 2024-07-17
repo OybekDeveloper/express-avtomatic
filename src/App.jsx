@@ -5,6 +5,7 @@ import Footer from "./components/footer/footer";
 import About from "./interface/about/about";
 import Contact from "./interface/contact/contact";
 import Services from "./interface/services/services";
+import TopButton from "./components/top-button/top-button";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <TopButton />
     </main>
   );
 }

@@ -37,7 +37,6 @@ const Home = () => {
       );
 
       const tl2 = gsap.timeline({
-        delay: 0.3,
         scrollTrigger: {
           trigger: ".section1-container",
           start: "50% bottom",
@@ -68,6 +67,7 @@ const Home = () => {
         { opacity: 1, x: 0, stagger: 0.2 }
       );
       const tl3_img = gsap.timeline({
+        delay:0.2,
         scrollTrigger: {
           trigger: ".section2-container",
           start: "50% bottom",
@@ -76,7 +76,7 @@ const Home = () => {
       });
 
       tl3_img.fromTo(
-        ".homeback1 .section2-container .image-container img",
+        ".homeback1 .section2-container .img-container",
         { opacity: 0, x: 400, ease: "power3.out" },
         { opacity: 1, x: 0 }
       );
@@ -102,7 +102,7 @@ const Home = () => {
         delay: 0.6,
         scrollTrigger: {
           trigger: ".disign-container",
-          start: "20% bottom",
+          start: "10% bottom",
           end: "bottom top",
         },
       });
@@ -116,8 +116,8 @@ const Home = () => {
       const tl5_card = gsap.timeline({
         delay: 1,
         scrollTrigger: {
-          trigger: ".disign-container",
-          start: "20% bottom",
+          trigger: ".card-container",
+          start: "10% bottom",
           end: "bottom top",
         },
       });
@@ -197,7 +197,7 @@ const Home = () => {
       </main>
       <main
         id="home-container2"
-        className="homeback1 w-full flex flex-col gap-[200px] relative pt-[50px]"
+        className="homeback1 w-full flex flex-col gap-[100px] relative pt-[50px]"
       >
         <div className="absolute top-0 left-0 w-full h-full bg-yellow-950/50 z-1"></div>
         <section className="section1-container relative w-11/12 max-w-[1440px] mx-auto grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6 mb-2 bg-transparent">
@@ -249,7 +249,7 @@ const Home = () => {
             </div>
             <div className="z-2 img-container w-full h-[400px] mt-2 hover-image">
               <img
-                className="w-full h-full object-cover rounded-md"
+                className="img-ishla w-full h-full object-cover rounded-md"
                 src={home4}
                 alt=""
               />
