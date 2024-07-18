@@ -7,6 +7,11 @@ import Contact from "./interface/contact/contact";
 import Services from "./interface/services/services";
 import TopButton from "./components/top-button/top-button";
 import ConstructionHouse from "./interface/services/01construction-house";
+import ReconstBuild from "./interface/services/02reconst-build";
+import LowRise from "./interface/services/03low-rise";
+import Prefabricated from "./interface/services/04prefabricated";
+import CivilWorks from "./interface/services/05civil-works";
+import OfficeRenovation from "./interface/services/06office-renovation";
 
 function App() {
   return (
@@ -19,11 +24,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/construction-house" element={<ConstructionHouse />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/reconst-build" element={<ReconstBuild />} />
+          <Route path="/low-rise" element={<LowRise />} />
+          <Route path="/prefabricated" element={<Prefabricated />} />
+          <Route path="/civil-works" element={<CivilWorks />} />
+          <Route path="/office-renovation" element={<OfficeRenovation />} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </div>

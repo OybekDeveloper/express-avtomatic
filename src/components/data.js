@@ -52,22 +52,22 @@ export const navLinkData = [
         title: "Ремонт офисов",
         link: "/office-renovation",
       },
-      {
-        title: "Отделочные работы",
-        link: "/finish-work",
-      },
-      {
-        title: "Фасадные работы",
-        link: "/facade-work",
-      },
-      {
-        title: "Гидроизоляционные работы",
-        link: "/waterproofing",
-      },
-      {
-        title: "Благоустройство",
-        link: "/improvement",
-      },
+      // {
+      //   title: "Отделочные работы",
+      //   link: "/finish-work",
+      // },
+      // {
+      //   title: "Фасадные работы",
+      //   link: "/facade-work",
+      // },
+      // {
+      //   title: "Гидроизоляционные работы",
+      //   link: "/waterproofing",
+      // },
+      // {
+      //   title: "Благоустройство",
+      //   link: "/improvement",
+      // },
     ],
   },
   {
@@ -122,44 +122,44 @@ export const home1Data = [
 export const servicesData = [
   {
     title: "Строительство домов",
-    img: "",
+    link: "/construction-house",
   },
   {
     title: "Реконструкция зданий",
-    img: "",
+    link: "/reconst-build",
   },
   {
     title: "Малоэтажное строительство",
-    img: "",
+    link: "/low-rise",
   },
   {
     title: "Быстровозводимые здания",
-    img: "",
+    link: "/prefabricated",
   },
   {
     title: "Общестроительные работы",
-    img: "",
+    link: "/civil-works",
   },
   {
     title: "Ремонт офисов",
-    img: "",
+    link: "/office-renovation",
   },
-  {
-    title: "Отделочные работы",
-    img: "",
-  },
-  {
-    title: "Фасадные работы",
-    img: "",
-  },
-  {
-    title: "Гидроизоляционные работы",
-    img: "",
-  },
-  {
-    title: "Благоустройство",
-    img: "",
-  },
+  // {
+  //   title: "Отделочные работы",
+  //   img: "",
+  // },
+  // {
+  //   title: "Фасадные работы",
+  //   img: "",
+  // },
+  // {
+  //   title: "Гидроизоляционные работы",
+  //   img: "",
+  // },
+  // {
+  //   title: "Благоустройство",
+  //   img: "",
+  // },
 ];
 
 export const contactImage = [

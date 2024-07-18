@@ -4,6 +4,7 @@ import { home1 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { NavLink } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,16 +41,18 @@ const Services = () => {
       },
     });
 
-    tl1.fromTo(
-      ".section2 h1",
-      { opacity: 0, x: -20 },
-      { opacity: 1, x: 0, stagger: 0.1, ease: "power1.out" }
-    ).fromTo(
-      ".section2 ul li",
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, stagger: 0.1, ease: "power1.out" },
-      "-=0.3"
-    );
+    tl1
+      .fromTo(
+        ".section2 h1",
+        { opacity: 0, x: -20 },
+        { opacity: 1, x: 0, stagger: 0.1, ease: "power1.out" }
+      )
+      .fromTo(
+        ".section2 ul li",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, stagger: 0.1, ease: "power1.out" },
+        "-=0.3"
+      );
 
     const tl2 = gsap.timeline({
       scrollTrigger: {
@@ -59,16 +62,18 @@ const Services = () => {
       },
     });
 
-    tl2.fromTo(
-      ".section3 h1",
-      { opacity: 0, x: -20 },
-      { opacity: 1, x: 0, stagger: 0.1, ease: "power1.out" }
-    ).fromTo(
-      ".section3 ul li",
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, stagger: 0.1, ease: "power1.out" },
-      "-=0.3"
-    );
+    tl2
+      .fromTo(
+        ".section3 h1",
+        { opacity: 0, x: -20 },
+        { opacity: 1, x: 0, stagger: 0.1, ease: "power1.out" }
+      )
+      .fromTo(
+        ".section3 ul li",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, stagger: 0.1, ease: "power1.out" },
+        "-=0.3"
+      );
   });
 
   return (
@@ -79,16 +84,17 @@ const Services = () => {
         </h1>
         <div className="services-container grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 mt-3">
           {servicesData.map((item, idx) => (
-            <div
+            <NavLink
+              to={item.link}
               key={idx}
               className="services cursor-pointer w-full flex justify-center items-center flex-col gap-3 bg-secondaryBg rounded-[12px] p-4"
             >
-              <div>
-                <img className="rounded-md" src={home1} alt="" />
+              <div className="hover-image w-full h-[200px] overflow-hidden">
+                <img className="w-full h-full object-cover rounded-md" src={home1} alt="" />
               </div>
               <h2>{item.title}</h2>
               <p>{item.description}</p>
-            </div>
+            </NavLink>
           ))}
         </div>
         <p className="clamp4 text-thin pt-4">

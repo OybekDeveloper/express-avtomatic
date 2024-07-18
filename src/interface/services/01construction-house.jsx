@@ -134,7 +134,7 @@ const ConstructionHouse = () => {
 
   return (
     <main className="w-full flex flex-col gap-[100px] relative text-white pb-[50px]">
-      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-1"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-primary z-1"></div>
       <section className="section1 relative w-11/12 mx-auto max-w-[1440px] flex justify-center items-start flex-col min-h-[calc(100vh-88px)]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex flex-col items-start justify-center h-full">

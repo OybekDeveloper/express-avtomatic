@@ -160,7 +160,7 @@ const Home = () => {
     <main ref={container}>
       <main
         id="home-container1"
-        className="homeback h-[calc(100vh-88px)] w-full flex flex-col gap-[100px] relative pb-[50px] head-h1"
+        className="homeback h-[calc(100vh-88px)] w-full flex flex-col gap-[100px] relative pb-[50px]"
       >
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-1"></div>
         <div className="video-background">
@@ -199,7 +199,7 @@ const Home = () => {
         id="home-container2"
         className="homeback1 w-full flex flex-col gap-[100px] relative pt-[50px]"
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-yellow-950/50 z-1"></div>
+        <div className="absolute top-0 left-0 w-full h-full z-1"></div>
         <section className="section1-container relative w-11/12 max-w-[1440px] mx-auto grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6 mb-2 bg-transparent">
           {home1Data.map((item, idx) => (
             <div
@@ -213,7 +213,7 @@ const Home = () => {
                   alt=""
                 />
               </div>
-              <h1 className="text-white font-bold clamp3 text-center head-h1">
+              <h1 className="text-thin font-bold clamp3 text-center">
                 {item.title}
               </h1>
             </div>
@@ -226,7 +226,7 @@ const Home = () => {
           </h1>
           <div className="flex max-lg:flex-col-reverse justify-between items-center gap-3 ">
             <div className="flex justify-start items-start flex-col gap-3">
-              <ul className="text-white flex flex-col gap-3">
+              <ul className="text-thin flex flex-col gap-3">
                 <li>
                   <strong>ПРОЕКТИРОВАНИЕ:</strong> эскизные, рабочие,
                   дизайн-проекты, проекты для строительства, реконструкции,
@@ -283,9 +283,9 @@ const Home = () => {
             </div>
             {hoveredItem && (
               <div className="hover-card z-10 fixed top-[88px] left-0  w-screen h-[calc(100vh-88px)] flex items-center justify-center ">
-                <div className="bg-white p-4 rounded-md w-11/12 md:w-1/2 min-h-[80%] shadow-lg">
+                <div className="bg-white p-4 rounded-md w-11/12 md:w-1/2 max-h-[80%] shadow-lg overflow-y-scroll">
                   <div className="flex flex-col gap-4">
-                    <div className="bg w-full h-[250px]">
+                    <div className="bg w-full h-[100px] md:h-[250px]">
                       <img
                         className="rounded-md w-full h-full object-contain"
                         src={hoveredItem.img}
@@ -300,7 +300,7 @@ const Home = () => {
                       className="mt-4 px-4 py-2 bg-primary text-white rounded-md"
                       onClick={handleClose}
                     >
-                      Close
+                      закрывать
                     </button>
                   </div>
                 </div>
