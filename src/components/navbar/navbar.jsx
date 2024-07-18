@@ -127,9 +127,9 @@ const Navbar = () => {
             <MdOutlinePhoneCallback className="text-md font-bold text-primary" />
             <h1 className="clamp5 font-bold text-primary">+998 93 515 80 84</h1>
           </div>
-          <div className="lang z-30">
+          {/* <div className="lang z-30">
             <Language />
-          </div>
+          </div> */}
           <div className="md:hidden burger-menu relative">
             <BurgerMenu handleOpenMenu={handleOpenMenu} isOpen={isOpen} />
           </div>
