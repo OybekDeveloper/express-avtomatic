@@ -300,7 +300,7 @@ const Home = () => {
                       className="mt-4 px-4 py-2 bg-primary text-white rounded-md"
                       onClick={handleClose}
                     >
-                      закрывать
+                      Закрыть
                     </button>
                   </div>
                 </div>

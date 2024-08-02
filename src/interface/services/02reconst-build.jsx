@@ -79,7 +79,7 @@ const ReconstBuild = () => {
               Реконструкция и ремонт зданий
             </h1>
             <p className="w-full text-lg md:text-xl leading-relaxed mb-6">
-              Строительная компания "EXPRESS AUTOMATIUCA " проводит
+              Строительная компания "EXPRESS AUTOMATICA" проводит
               реконструкцию зданий и сооружений. Это позволяет улучшать их
               характеристики, устранять износ, менять назначение объекта.
             </p>
@@ -142,7 +142,7 @@ const ReconstBuild = () => {
           Как проводится реконструкция?
         </h1>
         <p className="text-lg md:text-xl leading-relaxed mb-6">
-          Компания "EXPRESS AUTOMATIUCA" реконструирует здания, сооружения,
+          Компания "EXPRESS AUTOMATICA" реконструирует здания, сооружения,
           выполняя работы в следующем порядке:
         </p>
         <ul className="flex flex-col gap-4 mt-3 list-disc pl-5">
@@ -182,7 +182,7 @@ const ReconstBuild = () => {
         </div>
         <div>
           <h1 className="text-white text-3xl md:text-4xl font-bold leading-tight mb-4">
-            Почему EXPRESS automatica?
+            Почему EXPRESS AUTOMATICA?
           </h1>
           <p className="text-lg md:text-xl leading-relaxed mb-6">
             Реконструкция позволяет решать следующие задачи:
