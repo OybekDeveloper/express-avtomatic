@@ -123,10 +123,13 @@ const Navbar = () => {
           ))}
         </section>
         <section className="phone-container flex items-center justify-center gap-3">
-          <div className="max-sm:hidden phone flex items-center gap-3 rounded-3xl border border-primary p-2 cursor-pointer shadow-lg">
+          <button
+            onClick={() => window.open(`tel:+998 93 515 80 84`)}
+            className="max-sm:hidden phone flex items-center gap-3 rounded-3xl border border-primary p-2 cursor-pointer shadow-lg"
+          >
             <MdOutlinePhoneCallback className="text-md font-bold text-primary" />
             <h1 className="clamp5 font-bold text-primary">+998 93 515 80 84</h1>
-          </div>
+          </button>
           {/* <div className="lang z-30">
             <Language />
           </div> */}
@@ -175,7 +178,7 @@ const Navbar = () => {
                       <div className="absolute w-[20px] bg-white rotate-45"></div>
                       {item.submenu.map((subItem, subIdx) => (
                         <NavLink
-                        onClick={()=>setIsOpen(false)}
+                          onClick={() => setIsOpen(false)}
                           to={subItem.link}
                           key={subIdx}
                           className={"buttons"}

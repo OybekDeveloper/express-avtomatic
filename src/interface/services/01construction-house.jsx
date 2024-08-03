@@ -3,6 +3,7 @@ import { home4 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./index.scss";
+import { service1 } from "../../images/services";
 gsap.registerPlugin(ScrollTrigger);
 
 const ConstructionHouse = () => {
@@ -180,8 +181,8 @@ const ConstructionHouse = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full">
-            <img className="rounded-md" src={home4} alt="Construction House" />
+          <div className="w-full h-full">
+            <img className="rounded-md h-full w-full object-cover" src={service1} alt="Construction House" />
           </div>
         </div>
       </section>

@@ -43,8 +43,11 @@ const Footer = () => {
       },
     });
 
-    footerTl1
-      .fromTo("footer img", { opacity: 0, x: -100 }, { opacity: 1, x: 0 });
+    footerTl1.fromTo(
+      "footer img",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 }
+    );
 
     footerTl2.fromTo(
       "footer .footer-container  .tab",
@@ -79,7 +82,7 @@ const Footer = () => {
     <footer id="footer" className="w-full bg-secondaryBg">
       <main className="max-w-[1440px] w-11/12 mx-auto flex flex-col gap-2 py-2">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-[24px]">
-          <img className="w-[200px] object-contain" src={logo} alt="" />
+          <img className="w-[250px] object-contain" src={logo} alt="" />
           <div className="footer-container flex flex-col gap-2 text-thin items-start justify-start">
             {navLinkData.map((item, idx) => (
               <NavLink to={item.link} key={idx} className={"tab"}>
@@ -100,20 +103,14 @@ const Footer = () => {
             </div>
             <div className="link flex items-center justify-start gap-2">
               <TfiEmail className="text-thin text-[24px]" />
-              <h1 className="clamp4 text-thin">
-                tnodir@gmail.com
-                <br />
-                www.expressautomatica.uz
-              </h1>
+              <h1 className="clamp4 text-thin">tnodir@gmail.com</h1>
             </div>
           </div>
         </div>
         <div className="bg-thin w-full h-[1px]"></div>
         <div className="footer-bottom flex flex-col gap-2">
           <h1>©2005-2024 </h1>
-          <h1>
-          Строительство, ремонт и реконструкция зданий, отделка офисов.
-          </h1>
+          <h1>Строительство, ремонт и реконструкция зданий, отделка офисов.</h1>
         </div>
       </main>
     </footer>

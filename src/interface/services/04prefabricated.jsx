@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { home1, home4 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { service4, service4_1 } from "../../images/services";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,14 +90,14 @@ const Prefabricated = () => {
               быстро. У здания может быть почти любая площадь.
             </p>
           </div>
-          <div className="w-full">
-            <img className="rounded-md" src={home4} alt="Construction House" />
+          <div className="w-full h-full">
+            <img className="rounded-md w-full h-full object-cover" src={service4} alt="Construction House" />
           </div>
         </div>
       </section>
       <section className="section2 relative w-11/12 mx-auto max-w-[1440px] grid gap-6 md:grid-cols-2 grid-cols-1">
-        <div>
-          <img src={home1} alt="" />
+        <div className="w-full h-full">
+          <img className="w-full h-full object-cover" src={service4_1} alt="" />
         </div>
         <div>
           <h1 className="text-white clamp3 font-bold leading-tight mb-4">

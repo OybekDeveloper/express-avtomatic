@@ -3,6 +3,7 @@ import { home4 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./index.scss";
+import { about1, about2 } from "../../images/about-img";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -131,7 +132,7 @@ const About = () => {
             </p>
           </div>
           <div className="w-full">
-            <img className="rounded-md" src={home4} alt="dssdfd" />
+            <img className="rounded-md" src={about2} alt="dssdfd" />
           </div>
         </div>
       </section>
@@ -180,8 +181,8 @@ const About = () => {
         </ul>
       </section>
       <section className="section3 relative w-11/12 mx-auto max-w-[1440px] flex flex-col md:flex-row gap-6 justify-between items-center">
-        <div className="">
-          <img src={home4} className="rounded-md" alt="Services" />
+        <div className="w-full h-full">
+          <img src={about1} className="w-full h-full object-cover rounded-md" alt="Services" />
         </div>
         <div>
           <h1 className="font-bold clamp3">

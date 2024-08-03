@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { home4 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { service2_2, service3, service3_1 } from "../../images/services";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,7 +74,7 @@ const LowRise = () => {
     <main className="w-full flex flex-col gap-[100px] relative text-white pb-[50px]">
       <div className="absolute top-0 left-0 w-full h-full bg-primary z-1"></div>
       <section className="section1 relative w-11/12 mx-auto max-w-[1440px] flex justify-center items-start flex-col min-h-[calc(100vh-88px)]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex flex-col items-start justify-center h-full">
             <h1 className="text-white clamp1 font-bold leading-tight mb-4">
               Малоэтажное строительство
@@ -86,13 +87,13 @@ const LowRise = () => {
               выступает как подрядчик при проведении работ на отдельных этапах.
             </p>
           </div>
-          <div className="w-full">
-            <img className="rounded-md" src={home4} alt="Construction House" />
+          <div className="w-full h-full">
+            <img className="rounded-md w-full h-full object-cover" src={service3} alt="Construction House" />
           </div>
         </div>
       </section>
       <section className="section2 relative w-11/12 mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img className="rounded-md" src={home4} alt="Construction" />
+        <img className="w-full h-full object-cover rounded-md" src={service3_1} alt="Construction" />
         <div>
           <h1 className="text-white clamp3 font-bold leading-tight mb-4">
             Услуги:
@@ -162,11 +163,11 @@ const LowRise = () => {
       </section>
       <section className="section4 relative w-11/12 mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <img className="rounded-md" src={home4} alt="Construction Image" />
+          <img className="rounded-md w-full h-full object-cover" src={service2_2} alt="Construction Image" />
         </div>
         <div>
           <h1 className="text-white clamp3 font-bold leading-tight mb-4">
-            Почему EXPRESS automatica?
+            Почему EXPRESS AUTOMATICA?
           </h1>
           <p className="clamp4 leading-relaxed mb-6">
             Реконструкция позволяет решать следующие задачи:

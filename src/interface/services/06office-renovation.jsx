@@ -2,6 +2,18 @@ import React, { useEffect } from "react";
 import { home1, home3, home4 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  service6,
+  service6_1,
+  service6_2,
+  service6_3,
+  service6_4,
+  service6_5,
+  service6_6,
+  service6_7,
+  service6_8,
+  service6_9,
+} from "../../images/services";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,12 +53,16 @@ const OfficeRenovation = () => {
 
     animateSection(".section2", [
       { selector: "h1", from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
-      { selector: ["ul li", "p"], from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
+      { selector: "ul li", from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
+      { selector: "p", from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
     ]);
+
     animateSection(".section3", [
       { selector: "h1", from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
-      { selector: ["ul li", "p"], from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
+      { selector: "ul li", from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
+      { selector: "p", from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
     ]);
+
     animateSection(".section4", [
       { selector: "h1", from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
       {
@@ -63,6 +79,19 @@ const OfficeRenovation = () => {
       },
     ]);
   }, []);
+
+  const dataWork = [
+    service6_1,
+    service6_2,
+    service6_3,
+    service6_4,
+    service6_5,
+    service6_6,
+    service6_7,
+    service6_8,
+    service6_9,
+  ];
+
   return (
     <main className="w-full flex flex-col gap-[100px] relative text-white pb-[50px]">
       <div className="absolute top-0 left-0 w-full h-full bg-primary z-1"></div>
@@ -80,7 +109,7 @@ const OfficeRenovation = () => {
             </p>
           </div>
           <div className="w-full">
-            <img className="rounded-md" src={home4} alt="Construction House" />
+            <img className="rounded-md" src={service6} alt="Construction House" />
           </div>
         </div>
       </section>
@@ -174,11 +203,11 @@ const OfficeRenovation = () => {
           Наши работы:
         </h1>
         <div className="img-container grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item, idx) => (
+          {dataWork.map((item, idx) => (
             <div key={idx} className="img w-full h-[200px]">
               <img
                 className="w-full h-full object-cover rounded-md"
-                src={home3}
+                src={item}
                 alt=""
               />
             </div>

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { home1, home4 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { service5 } from "../../images/services";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,9 +29,7 @@ const animateSection = (sectionClass, elements) => {
 const CivilWorks = () => {
   useEffect(() => {
     animateSection(".section1", [
-      { selector: "h1", from: { y: -50 }, to: { y: 0 }, stagger: 0.3 },
-      { selector: "p", from: { y: -50 }, to: { y: 0 }, stagger: 0.3 },
-      { selector: "ul li", from: { x: -50 }, to: { x: 0 }, stagger: 0.4 },
+      { selector: ["h1","p"], from: { y: -50 }, to: { y: 0 }, stagger: 0.3 },
       {
         selector: "img",
         from: { scale: 0.8 },
@@ -40,7 +39,8 @@ const CivilWorks = () => {
     ]);
 
     animateSection(".section2", [
-      { selector: ["ul li", "p"], from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
+      { selector: ["ul li"], from: { x: 50 }, to: { x: 0 }, stagger: 0.2 },
+      { selector: "h1", from: { y: -50 }, to: { y: 0 }, stagger: 0.3 },
     ]);
   }, []);
   return (
@@ -64,8 +64,12 @@ const CivilWorks = () => {
               цене.
             </p>
           </div>
-          <div className="w-full">
-            <img className="rounded-md" src={home4} alt="Construction House" />
+          <div className="w-full h-full">
+            <img
+              className="rounded-md w-full h-full object-cover"
+              src={service5}
+              alt="Construction House"
+            />
           </div>
         </div>
       </section>

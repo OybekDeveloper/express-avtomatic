@@ -58,9 +58,12 @@ const Contact = () => {
           <h1 className="clamp1 text-thin font-bold text-center">
             Контактная информация
           </h1>
-          <h1 className="clamp1 text-primary font-bold text-center">
+          <button
+            onClick={() => window.open(`tel:+998 93 515 80 84`)}
+            className="clamp1 text-primary font-bold text-center"
+          >
             +998 (93) 515-80-84
-          </h1>
+          </button>
           <p className="clamp3 text-thin text-center">
             г. Карши, Г. Гулом МСГ, ул. Насаф, д. 6/4
           </p>

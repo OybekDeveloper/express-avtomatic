@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { home4 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { service2, service2_1, service2_2 } from "../../images/services";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,12 +86,12 @@ const ReconstBuild = () => {
             </p>
           </div>
           <div className="w-full">
-            <img className="rounded-md" src={home4} alt="Construction House" />
+            <img className="rounded-md w-full h-full object-cover" src={service2} alt="Construction House" />
           </div>
         </div>
       </section>
       <section className="section2 relative w-11/12 mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img className="rounded-md" src={home4} alt="Construction" />
+        <img className="rounded-md w-full h-full object-cover" src={service2_1} alt="Construction" />
         <div>
           <h1 className="text-white text-3xl md:text-4xl font-bold leading-tight mb-4">
             Преимущества
@@ -177,8 +178,8 @@ const ReconstBuild = () => {
         </p>
       </section>
       <section className="section4 relative w-11/12 mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <img className="rounded-md" src={home4} alt="Construction Image" />
+        <div className="w-full h-full">
+          <img className="rounded-md w-full h-full object-cover" src={service2_2} alt="Construction Image" />
         </div>
         <div>
           <h1 className="text-white text-3xl md:text-4xl font-bold leading-tight mb-4">

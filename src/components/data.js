@@ -14,6 +14,14 @@ import {
   logo,
 } from "../images/home-img";
 import { home1, home2, home3 } from "../images/home-img";
+import {
+  service1,
+  service2,
+  service3,
+  service4,
+  service5,
+  service6,
+} from "../images/services";
 
 export const navLinkData = [
   {
@@ -31,26 +39,32 @@ export const navLinkData = [
       {
         title: "Строительство домов",
         link: "/construction-house",
+        img: service1,
       },
       {
         title: "Реконструкция зданий",
         link: "/reconst-build",
+        img: service2,
       },
       {
         title: "Малоэтажное строительство",
         link: "/low-rise",
+        img: service3,
       },
       {
         title: "Быстровозводимые здания",
         link: "/prefabricated",
+        img: service4,
       },
       {
         title: "Общестроительные работы",
         link: "/civil-works",
+        img: service5,
       },
       {
         title: "Ремонт офисов",
         link: "/office-renovation",
+        img: service6,
       },
       // {
       //   title: "Отделочные работы",
@@ -123,26 +137,32 @@ export const servicesData = [
   {
     title: "Строительство домов",
     link: "/construction-house",
+    img: service1,
   },
   {
     title: "Реконструкция зданий",
     link: "/reconst-build",
+    img: service2,
   },
   {
     title: "Малоэтажное строительство",
     link: "/low-rise",
+    img: service3,
   },
   {
     title: "Быстровозводимые здания",
     link: "/prefabricated",
+    img: service4,
   },
   {
     title: "Общестроительные работы",
     link: "/civil-works",
+    img: service5,
   },
   {
     title: "Ремонт офисов",
     link: "/office-renovation",
+    img: service6,
   },
   // {
   //   title: "Отделочные работы",
