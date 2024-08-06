@@ -17,6 +17,9 @@ import service6_6 from "./service6_6.jpg";
 import service6_7 from "./service6_7.png";
 import service6_8 from "./service6_8.jpg";
 import service6_9 from "./service6_9.jpg";
+import service6_10 from "./service6_10.jpg";
+import service6_11 from "./service6_11.jpg";
+import service6_12 from "./service6_12.jpg";
 
 export {
   service1,
@@ -38,4 +41,7 @@ export {
   service6_7,
   service6_8,
   service6_9,
+  service6_10,
+  service6_11,
+  service6_12,
 };

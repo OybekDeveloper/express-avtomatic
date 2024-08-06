@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
   useGSAP(() => {

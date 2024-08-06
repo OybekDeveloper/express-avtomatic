@@ -5,6 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   service6,
   service6_1,
+  service6_10,
+  service6_11,
+  service6_12,
   service6_2,
   service6_3,
   service6_4,
@@ -78,6 +81,7 @@ const OfficeRenovation = () => {
         stagger: 0.2,
       },
     ]);
+    window.scrollTo(0, 0);
   }, []);
 
   const dataWork = [
@@ -90,6 +94,9 @@ const OfficeRenovation = () => {
     service6_7,
     service6_8,
     service6_9,
+    service6_10,
+    service6_11,
+    service6_12,
   ];
 
   return (
@@ -109,7 +116,11 @@ const OfficeRenovation = () => {
             </p>
           </div>
           <div className="w-full">
-            <img className="rounded-md" src={service6} alt="Construction House" />
+            <img
+              className="rounded-md"
+              src={service6}
+              alt="Construction House"
+            />
           </div>
         </div>
       </section>

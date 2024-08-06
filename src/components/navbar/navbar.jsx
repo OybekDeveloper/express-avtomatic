@@ -124,11 +124,11 @@ const Navbar = () => {
         </section>
         <section className="phone-container flex items-center justify-center gap-3">
           <button
-            onClick={() => window.open(`tel:+998 93 515 80 84`)}
+            onClick={() => window.open(`tel:+998 90 940 33 36`)}
             className="max-sm:hidden phone flex items-center gap-3 rounded-3xl border border-primary p-2 cursor-pointer shadow-lg"
           >
             <MdOutlinePhoneCallback className="text-md font-bold text-primary" />
-            <h1 className="clamp5 font-bold text-primary">+998 93 515 80 84</h1>
+            <h1 className="clamp5 font-bold text-primary">+998 90 940 33 36</h1>
           </button>
           {/* <div className="lang z-30">
             <Language />

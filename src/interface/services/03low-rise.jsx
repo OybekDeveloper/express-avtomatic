@@ -69,6 +69,8 @@ const LowRise = () => {
       { selector: "ul li", from: { x: -50 }, to: { x: 0 }, stagger: 0.2 },
       { selector: "p", from: { y: -50 }, to: { y: 20 }, stagger: 0.2 },
     ]);
+    window.scrollTo(0, 0);
+
   }, []);
   return (
     <main className="w-full flex flex-col gap-[100px] relative text-white pb-[50px]">

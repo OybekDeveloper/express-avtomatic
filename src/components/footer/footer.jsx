@@ -99,11 +99,11 @@ const Footer = () => {
             </div>
             <div className="link flex items-center justify-start gap-2">
               <FaPhoneAlt className="text-thin text-[24px]" />
-              <h1 className="clamp4 text-thin">+998 (93) 515-80-84</h1>
+              <h1 className="clamp4 text-thin">+998 (90) 940 33 36</h1>
             </div>
             <div className="link flex items-center justify-start gap-2">
               <TfiEmail className="text-thin text-[24px]" />
-              <h1 className="clamp4 text-thin">tnodir@gmail.com</h1>
+              <h1 className="clamp4 text-thin"> info@express-automatica.com</h1>
             </div>
           </div>
         </div>

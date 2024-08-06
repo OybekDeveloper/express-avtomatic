@@ -2,7 +2,7 @@ import home1 from "./1.jpg";
 import home2 from "./2.jpg";
 import home3 from "./3.jpg";
 import home4 from "./4.jpg";
-import home5 from "./5.jpg";
+import home5 from "./5.webp";
 import home6 from "./6.jpg";
 import disign from "./disign.png";
 import disign1 from "./disign1.png";

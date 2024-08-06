@@ -131,6 +131,7 @@ const ConstructionHouse = () => {
         },
       }
     );
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -182,7 +183,11 @@ const ConstructionHouse = () => {
             </ul>
           </div>
           <div className="w-full h-full">
-            <img className="rounded-md h-full w-full object-cover" src={service1} alt="Construction House" />
+            <img
+              className="rounded-md h-full w-full object-cover"
+              src={service1}
+              alt="Construction House"
+            />
           </div>
         </div>
       </section>

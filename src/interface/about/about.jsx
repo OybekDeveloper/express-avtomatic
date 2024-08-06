@@ -116,6 +116,10 @@ const About = () => {
     );
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="w-full flex flex-col gap-[100px] aboutback relative text-thin pb-[50px]">
       <section className="section1 relative w-11/12 mx-auto max-w-[1440px] flex justify-center items-start flex-col min-h-[calc(100vh-88px)]">
@@ -182,7 +186,11 @@ const About = () => {
       </section>
       <section className="section3 relative w-11/12 mx-auto max-w-[1440px] flex flex-col md:flex-row gap-6 justify-between items-center">
         <div className="w-full h-full">
-          <img src={about1} className="w-full h-full object-cover rounded-md" alt="Services" />
+          <img
+            src={about1}
+            className="w-full h-full object-cover rounded-md"
+            alt="Services"
+          />
         </div>
         <div>
           <h1 className="font-bold clamp3">

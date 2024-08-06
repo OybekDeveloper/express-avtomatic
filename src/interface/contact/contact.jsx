@@ -62,7 +62,7 @@ const Contact = () => {
             onClick={() => window.open(`tel:+998 93 515 80 84`)}
             className="clamp1 text-primary font-bold text-center"
           >
-            +998 (93) 515-80-84
+            +998 (90) 940 33 36
           </button>
           <p className="clamp3 text-thin text-center">
             г. Карши, Г. Гулом МСГ, ул. Насаф, д. 6/4
