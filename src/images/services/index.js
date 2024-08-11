@@ -20,6 +20,18 @@ import service6_9 from "./service6_9.jpg";
 import service6_10 from "./service6_10.jpg";
 import service6_11 from "./service6_11.jpg";
 import service6_12 from "./service6_12.jpg";
+import service7 from './service6_7.png'
+import service7_1 from './service7_1.jpg'
+import service7_2 from './service7_2.jpg'
+import service7_3 from './service7_3.jpg'
+import service7_4 from './service7_4.jpg'
+
+import service8 from './service8.jpg'
+
+import service9 from './service9.jpg'
+
+import service10 from './service10.jpg'
+import service10_1 from './service10_1.jpg'
 
 export {
   service1,
@@ -44,4 +56,14 @@ export {
   service6_10,
   service6_11,
   service6_12,
+  service7,
+  service7_1,
+  service7_2,
+  service7_3,
+  service7_4,
+  service8,
+  service9,
+  service10,
+  service10_1,
+ 
 };

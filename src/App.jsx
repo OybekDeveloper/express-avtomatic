@@ -12,6 +12,10 @@ import LowRise from "./interface/services/03low-rise";
 import Prefabricated from "./interface/services/04prefabricated";
 import CivilWorks from "./interface/services/05civil-works";
 import OfficeRenovation from "./interface/services/06office-renovation";
+import FinishWork from "./interface/services/07finish-work";
+import FacadeWork from "./interface/services/08facade-work";
+import Waterproofing from "./interface/services/09waterproofing";
+import Improvement from "./interface/services/10improvement";
 
 function App() {
   return (
@@ -29,6 +33,10 @@ function App() {
           <Route path="/prefabricated" element={<Prefabricated />} />
           <Route path="/civil-works" element={<CivilWorks />} />
           <Route path="/office-renovation" element={<OfficeRenovation />} />
+          <Route path="/finish-work" element={<FinishWork />} />
+          <Route path="/facade-work" element={<FacadeWork />} />
+          <Route path="/waterproofing" element={<Waterproofing />} />
+          <Route path="/improvement" element={<Improvement />} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </div>

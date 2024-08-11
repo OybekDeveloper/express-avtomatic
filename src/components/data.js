@@ -66,22 +66,22 @@ export const navLinkData = [
         link: "/office-renovation",
         img: service6,
       },
-      // {
-      //   title: "Отделочные работы",
-      //   link: "/finish-work",
-      // },
-      // {
-      //   title: "Фасадные работы",
-      //   link: "/facade-work",
-      // },
-      // {
-      //   title: "Гидроизоляционные работы",
-      //   link: "/waterproofing",
-      // },
-      // {
-      //   title: "Благоустройство",
-      //   link: "/improvement",
-      // },
+      {
+        title: "Отделочные работы",
+        link: "/finish-work",
+      },
+      {
+        title: "Фасадные работы",
+        link: "/facade-work",
+      },
+      {
+        title: "Гидроизоляционные работы",
+        link: "/waterproofing",
+      },
+      {
+        title: "Благоустройство",
+        link: "/improvement",
+      },
     ],
   },
   {
