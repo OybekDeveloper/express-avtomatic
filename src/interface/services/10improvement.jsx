@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import { home4 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { service10, service10_1, service2_2, service3, service3_1 } from "../../images/services";
+import { service10, service10_1 } from "../../images/services";
 
 gsap.registerPlugin(ScrollTrigger);
 

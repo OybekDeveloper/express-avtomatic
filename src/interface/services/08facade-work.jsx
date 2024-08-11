@@ -1,21 +1,7 @@
 import React, { useEffect } from "react";
-import { home1, home3, home4 } from "../../images/home-img";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
-  service6,
-  service6_1,
-  service6_10,
-  service6_11,
-  service6_12,
-  service6_2,
-  service6_3,
-  service6_4,
-  service6_5,
-  service6_6,
-  service6_7,
-  service6_8,
-  service6_9,
   service7_1,
   service7_2,
   service7_3,
